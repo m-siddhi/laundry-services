@@ -1,76 +1,63 @@
-* {
+html,
+body {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow: hidden;
     font-family: "Segoe UI", sans-serif;
-}
-
-body {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .navbar {
+    height: 80px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 3rem;
+    padding: 0 3rem;
     background-color: #f9fafe;
 }
 
 .logo {
-    font-size: 1.3rem;
     font-weight: bold;
-    color: #333;
+    font-size: 1.2rem;
 }
 
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
+    color: #333;
     font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #007bff;
 }
 
 .user {
-    padding: 0.9rem 1.5rem;
+    padding: 0.4rem 1rem;
     background-color: #e6f0ff;
     color: #007bff;
-    border-radius: 16px;
-    font-weight: 500;
+    border-radius: 8px;
 }
 
-/* Hero Section */
+/* Hero section (full viewport - navbar height) */
 .hero {
     display: flex;
-    flex-wrap: wrap;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 80px); /* 80px navbar */
     padding: 2rem 3rem;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
 }
 
 .hero-left {
     flex: 1;
-    min-width: 300px;
     padding-right: 2rem;
-    padding-left: 4rem;
 }
 
 .hero-left h1 {
     font-size: 2.7rem;
-    color: #333;
     line-height: 1.3;
+    color: #333;
     margin-bottom: 1rem;
 }
 
@@ -82,46 +69,36 @@ body {
     font-size: 1rem;
     color: #666;
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .hero-left button {
-    padding: 1.2rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     background-color: #007bff;
     border: none;
     color: #fff;
-    font-size: 1rem;
-    border-radius: 13px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.hero-left button:hover {
-    background-color: #0056b3;
 }
 
 .hero-right {
     flex: 1;
-    min-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
 }
 
 .hero-right img {
     max-width: 100%;
-    height: auto;
     max-height: 80vh;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 2rem;
-        height: auto;
     }
 
     .hero-left {
@@ -132,13 +109,8 @@ body {
         font-size: 2rem;
     }
 
-    .hero-left p {
-        font-size: 0.95rem;
-    }
-
     .hero-left button {
         width: 80%;
-        margin: 0 auto;
     }
 
     .hero-right {
@@ -147,15 +119,8 @@ body {
 
     .navbar {
         flex-direction: column;
+        height: auto;
         gap: 1rem;
         padding: 1rem;
-    }
-
-    .nav-links {
-        justify-content: center;
-    }
-
-    .user {
-        margin-top: 0.5rem;
     }
 }
